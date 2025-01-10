@@ -3,56 +3,55 @@ package trans.products;
 import trans.WaterTransport;
 
 public class JetSki extends WaterTransport {
-    // Поля класса
     private String skipperPosition; //стоячий, сидячий
-    private String type; //туристический, спортивный
+    private String jetSkiType; //туристический, спортивный
 
     // Конструктор
-    public JetSki(double speed, boolean hasMatches, int people, double length, String countryOfOrigin, String skiperPosition, String type) {
-        super(speed, hasMatches, people, length, countryOfOrigin);
-        this.skipperPosition = skiperPosition;
-        this.type = type;
+    public JetSki(String name, double maxSpeed, int passengerCapacity, double price,
+                  String skipperPosition, String jetSkiType) {
+        super(name, maxSpeed, passengerCapacity, price);
+        this.skipperPosition = skipperPosition;
+        this.jetSkiType = jetSkiType;
     }
 
     public String getSkipperPosition() {
         return skipperPosition;
     }
-
     public void setSkipperPosition(String skipperPosition) {
         this.skipperPosition = skipperPosition;
     }
-
-    public String getType() {
-        return type;
+    public String getJetSkiType() {
+        return jetSkiType;
     }
-
-    public void setType(String type) {
-        this.type = type;
+    public void setJetSkiType(String jetSkiType) {
+        this.jetSkiType = jetSkiType;
     }
 
     //для установки количества людей с проверкой (макс 2)
-    @Override
-    public void setPeople(int people) {
-        if (people > 2) {
-            System.out.println("Допустимо максимум 2 чевлоека на JetSki");
-            this.people = 2;
-        } else {
-            this.people = people;
-        }
-    }
-
-    @Override
-    public int getPeople() {
-        return people;  // возвращаем количество людей
-    }
+//    @Override
+//    public void setPassengerCapacity(int passengerCapacity) {
+//        if (passengerCapacity > 2) {
+//            System.out.println("Допустимо максимум 2 чевлоека на JetSki");
+//            this.passengerCapacity = 2;
+//        } else {
+//            this.passengerCapacity = passengerCapacity;
+//        }
+//    }
 
     // Метод для вывода информации о лодке
-    public void displayInfo() {
-        System.out.println("Сведения о водном мотоцикле:");
-        System.out.println("Макс скорость: " + speed);
-        System.out.println("Имеются мачты: " + hasMatches);
-        System.out.println("Длина: " + length + " футов");
-        System.out.println("Тип: " + type);
-        System.out.println("Страна происхождения: " + WaterTransport.countryOfOrigin);
+    @Override
+    public String toString() {
+        return super.toString() + ",\nSkipper position: " + skipperPosition + ",\nJetSki type: " + jetSkiType +
+                ".\n";
     }
+
+//    @Override
+//    public double getMaxSpeed() {
+//        return maxSpeed * 2;
+//    }
+//    @Override
+//    public int getPassengerCapacity() {
+//        return passengerCapacity * 2;  // возвращаем количество людей
+//    }
+
 }

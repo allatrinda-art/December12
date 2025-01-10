@@ -1,60 +1,45 @@
 package trans;
 
 public class WaterTransport{
-    protected double speed; // макс скорость
-    protected boolean hasMatches;
-    protected int people; // допустимое кол-во людей на судне
-    protected double length;
-    protected static  String countryOfOrigin; // Страна происхождения
+    protected double maxSpeed; // макс скорость
+    protected int passengerCapacity; // допустимое кол-во людей на судне
+    protected double price;
+    protected String name;
 
-    public WaterTransport(double speed, boolean hasMatches, int people, double length, String countryOfOrigin) {
-        this.speed = speed;
-        this.hasMatches = hasMatches;
-        this.people = people;
-        this.length = length;
-        this.countryOfOrigin = countryOfOrigin;
+    public WaterTransport(String name, double maxSpeed, int passengerCapacity, double price) {
+        this.name = name;
+        this.maxSpeed = maxSpeed;
+        this.passengerCapacity = passengerCapacity;
+        this.price = price;
     }
 
-    // Метод для получения допустимого количества людей на судне
-    public int getPeople() {
-        return people;
+    public double getMaxSpeed() {
+        return maxSpeed;
     }
-    // Метод для установки количества людей
-    public void setPeople(int people) {
-        this.people = people;
+    public void setMaxSpeed(double maxSpeed) {
+        this.maxSpeed = maxSpeed;
     }
-
-    public void setSpeed(double speed) {
-        this.speed = speed;
+    public int getPassengerCapacity() {
+        return passengerCapacity;
     }
-
-    public boolean isHasMatches() {
-        return hasMatches;
+    public void setPassengerCapacity(int passengerCapacity) {
+        this.passengerCapacity = passengerCapacity;
     }
-
-    public void setHasMatches(boolean hasMatches) {
-        this.hasMatches = hasMatches;
+    public double getPrice() {
+        return price;
     }
-
-    public void setLength(double length) {
-        this.length = length;
+    public void setPrice(double price) {
+        this.price = price;
     }
-
-    public String getCountryOfOrigin() {
-        return countryOfOrigin;
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setCountryOfOrigin(String countryOfOrigin) {
-        this.countryOfOrigin = countryOfOrigin;
-    }
-
-    //метод для получения максимальной скорости судна
-    public double getSpeed() {
-        return speed;
-    }
-
-        //метод для получения длины судна
-    public double getLength() {
-        return length;
+    public String toString() {
+        return "Name: " + name + ",\nMax Speed: " + maxSpeed + " knots, \nHow many people can use this transport? - "
+                + passengerCapacity + ",\nPrice is " + price + " $";
     }
 }

@@ -5,37 +5,43 @@ import trans.WaterTransport;
 public class ServiceBoat extends WaterTransport {
     protected String type; //перевозки, исследовательская, военная, морская полиция
     protected String securityLevel;
-    private int dateOfExpiration;
+    private int serviceBoatcrew;
 
-    public ServiceBoat(double speed, boolean hasMatches, int people, double length, String countryOfOrigin) {
-        super(speed, hasMatches, people, length, countryOfOrigin);
-    }
+    public ServiceBoat(String name, double maxSpeed, int passengerCapacity, double price, String type,
+                       String securityLevel, int serviceBoatcrew) {
+        super(name, maxSpeed, passengerCapacity, price);
+        this.type = type;
+        this.securityLevel = securityLevel;
+        this.serviceBoatcrew = serviceBoatcrew;
+        }
 
     public String getType() {
         return type;
     }
-
     public void setType(String type) {
         this.type = type;
     }
-
     public String getSecurityLevel() {
         return securityLevel;
     }
-
     public void setSecurityLevel(String securityLevel) {
         this.securityLevel = securityLevel;
     }
-
-    public int getDateOfExpiration() {
-        return dateOfExpiration;
+    public int getServiceBoatcrew() {
+        return serviceBoatcrew;
+    }
+    public void setServiceBoatcrew(int serviceBoatcrew) {
+        this.serviceBoatcrew = serviceBoatcrew;
     }
 
-    public void setDateOfExpiration(int dateOfExpiration) {
-        this.dateOfExpiration = dateOfExpiration;
+    @Override
+    public String toString() {
+        return super.toString() + ",\nType of service boat: " + type + ",\nSecurity level is " + securityLevel
+                + ",\nCrew team amount is " + serviceBoatcrew + " people.";
     }
 
-    public void displayInfo() {
-
-    }
+//    @Override
+//    public double getMaxSpeed() {
+//        return maxSpeed * 2;
+//    }
 }

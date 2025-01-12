@@ -1,8 +1,11 @@
 package trans.products;
 
 import trans.WaterTransport;
+import java.util.Scanner;
 
 public class Sailboat extends WaterTransport {
+    Scanner sc = new Scanner(System.in);
+
     private String sailBoatType; // Тип лодки
     private int numberOfMatches; // Количество матч
     private int numberOfSails; // Количество парусов
@@ -21,41 +24,26 @@ public class Sailboat extends WaterTransport {
         this.hasEngine = hasEngine;
     }
 
-    public String getSailBoatType() {
-        return sailBoatType;
-    }
-    public void setSailBoatType(String sailBoatType) {
-        this.sailBoatType = sailBoatType;
-    }
-    public int getNumberOfMatches() {
-        return numberOfMatches;
-    }
-    public void setNumberOfMatches(int numberOfMatches) {
-        this.numberOfMatches = numberOfMatches;
-    }
-    public int getNumberOfSails() {
-        return numberOfSails;
-    }
-    public void setNumberOfSails(int numberOfSails) {
-        this.numberOfSails = numberOfSails;
-    }
-    public String getEnvironment() {
-        return environment;
-    }
-    public void setEnvironment(String environment) {
-        this.environment = environment;
-    }
-    public boolean isHasEngine() {
-        return hasEngine;
-    }
-    public void setHasEngine(boolean hasEngine) {
-        this.hasEngine = hasEngine;
-    }
-
 //    @Override
 //    public double getMaxSpeed() {
 //        return maxSpeed % 1.5;
 //    }
+
+    public Sailboat() {};
+
+    String[] sailBoatParams = {"type of the sail boat: ", "number of matches: ", "number of sails: ", "type of environment: ", "does it has engine?(true/false) - "};
+
+    public Sailboat getSailBoatParams(WaterTransport waterTransport) {
+        String[] data = new String[sailBoatParams.length];
+        for(int i = 0; i < sailBoatParams.length; i ++) {
+            System.out.println("Enter " + sailBoatParams[i]);
+            data[i] = sc.nextLine();
+        }
+        Sailboat receivedSailBoat = new Sailboat(waterTransport.getName(), waterTransport.getMaxSpeed(),
+                waterTransport.getPassengerCapacity(), waterTransport.getPrice(), data[0], Integer.valueOf(data[1]),
+                Integer.valueOf(data[2]), data[3], Boolean.valueOf(data[4]));
+        return receivedSailBoat;
+    }
 
     // Метод для вывода информации о лодке
     @Override

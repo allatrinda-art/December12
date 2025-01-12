@@ -2,7 +2,11 @@ package trans.products;
 
 import trans.WaterTransport;
 
+import java.util.Scanner;
+
 public class JetSki extends WaterTransport {
+    Scanner sc = new Scanner(System.in);
+
     private String skipperPosition; //стоячий, сидячий
     private String jetSkiType; //туристический, спортивный
 
@@ -14,20 +18,7 @@ public class JetSki extends WaterTransport {
         this.jetSkiType = jetSkiType;
     }
 
-    public String getSkipperPosition() {
-        return skipperPosition;
-    }
-    public void setSkipperPosition(String skipperPosition) {
-        this.skipperPosition = skipperPosition;
-    }
-    public String getJetSkiType() {
-        return jetSkiType;
-    }
-    public void setJetSkiType(String jetSkiType) {
-        this.jetSkiType = jetSkiType;
-    }
-
-    //для установки количества людей с проверкой (макс 2)
+      //для установки количества людей с проверкой (макс 2)
 //    @Override
 //    public void setPassengerCapacity(int passengerCapacity) {
 //        if (passengerCapacity > 2) {
@@ -38,11 +29,25 @@ public class JetSki extends WaterTransport {
 //        }
 //    }
 
+    public JetSki() {};
+
+    String[] sailBoatParams = {"the Skipper position", "JetSki type"};
+
+    public JetSki getJatSkiParams (WaterTransport waterTransport) {
+        String[] data = new String[sailBoatParams.length];
+        for(int i = 0; i < sailBoatParams.length; i ++) {
+            System.out.println("Enter " + sailBoatParams[i]);
+            data[i] = sc.nextLine();
+        }
+        JetSki receivedJetSki = new JetSki(waterTransport.getName(), waterTransport.getMaxSpeed(),
+                waterTransport.getPassengerCapacity(), waterTransport.getPrice(), data[0], data[1]);
+        return receivedJetSki;
+    }
+
     // Метод для вывода информации о лодке
     @Override
     public String toString() {
-        return super.toString() + ",\nSkipper position: " + skipperPosition + ",\nJetSki type: " + jetSkiType +
-                ".\n";
+        return super.toString() + ",\nSkipper position: " + skipperPosition + ",\nJetSki type: " + jetSkiType + ".\n";
     }
 
 //    @Override

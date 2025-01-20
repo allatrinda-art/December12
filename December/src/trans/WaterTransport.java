@@ -1,10 +1,6 @@
 package trans;
 
-import java.util.Scanner;
-
 public class WaterTransport {
-    Scanner sc = new Scanner(System.in);
-
     protected double maxSpeed; // макс скорость
     protected int passengerCapacity; // допустимое кол-во людей на судне
     protected double price;
@@ -30,20 +26,20 @@ public class WaterTransport {
         return name;
     }
 
-    String[] transportParams = {"name", "max speed", "passenger capacity", "price"};
-
-    public WaterTransport(){};
-
-    public WaterTransport getWaterTransportParams() {
-        String[] data = new String[transportParams.length];
-        for(int i = 0; i < transportParams.length; i++){
-            System.out.println("Enter " + transportParams[i]);
-            data[i] = sc.nextLine();
-        }
-        WaterTransport receivedTransport = new WaterTransport(data[0], Double.valueOf(data[1]),
-                Integer.valueOf(data[2]), Double.valueOf(data[3]));
-        return receivedTransport;
-    }
+//    String[] transportParams = {"name", "max speed", "passenger capacity", "price"};
+//
+//    public WaterTransport(){};
+//
+//    public WaterTransport getWaterTransportParams() {
+//        String[] data = new String[transportParams.length];
+//        for(int i = 0; i < transportParams.length; i++){
+//            System.out.println("Enter " + transportParams[i]);
+//            data[i] = sc.nextLine();
+//        }
+//        WaterTransport receivedTransport = new WaterTransport(data[0], Double.valueOf(data[1]),
+//                Integer.valueOf(data[2]), Double.valueOf(data[3]));
+//        return receivedTransport;
+//    }
 
     public String toString() {
         return "Name: " + name + ",\nMax Speed: " + maxSpeed + " knots, \nHow many people can use this transport? - "

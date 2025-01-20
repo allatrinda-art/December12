@@ -2,11 +2,7 @@ package trans.products;
 
 import trans.WaterTransport;
 
-import java.util.Scanner;
-
 public class ServiceBoat extends WaterTransport {
-    Scanner sc = new Scanner(System.in);
-
     protected String type; //перевозки, исследовательская, военная, морская полиция
     protected String securityLevel;
     private int serviceBoatCrew;
@@ -19,21 +15,21 @@ public class ServiceBoat extends WaterTransport {
         this.serviceBoatCrew = serviceBoatCrew;
         }
 
-    public ServiceBoat() {};
-
-    String[] serviceBoatParams = {"type of service boat", "security level", "amount of crew team "};
-
-    public ServiceBoat getServiceBoatParams (WaterTransport waterTransport) {
-        String[] data = new String[serviceBoatParams.length];
-        for (int i = 0; i < serviceBoatParams.length; i ++) {
-            System.out.println("Enter " + serviceBoatParams[i]);
-            data[i] = sc.nextLine();
-        }
-        ServiceBoat receivedServiceBoat = new ServiceBoat(waterTransport.getName(), waterTransport.getMaxSpeed(),
-                waterTransport.getPassengerCapacity(), waterTransport.getPrice(), data[0], data[1],
-                Integer.valueOf(data[2]));
-        return receivedServiceBoat;
-    }
+//    public ServiceBoat() {};
+//
+//    String[] serviceBoatParams = {"type of service boat", "security level", "amount of crew team "};
+//
+//    public ServiceBoat getServiceBoatParams (WaterTransport waterTransport) {
+//        String[] data = new String[serviceBoatParams.length];
+//        for (int i = 0; i < serviceBoatParams.length; i ++) {
+//            System.out.println("Enter " + serviceBoatParams[i]);
+//            data[i] = sc.nextLine();
+//        }
+//        ServiceBoat receivedServiceBoat = new ServiceBoat(waterTransport.getName(), waterTransport.getMaxSpeed(),
+//                waterTransport.getPassengerCapacity(), waterTransport.getPrice(), data[0], data[1],
+//                Integer.valueOf(data[2]));
+//        return receivedServiceBoat;
+//    }
 
     @Override
     public String toString() {

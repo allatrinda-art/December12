@@ -2,11 +2,7 @@ package trans.products;
 
 import trans.WaterTransport;
 
-import java.util.Scanner;
-
 public class JetSki extends WaterTransport {
-    Scanner sc = new Scanner(System.in);
-
     private String skipperPosition; //стоячий, сидячий
     private String jetSkiType; //туристический, спортивный
 
@@ -29,20 +25,20 @@ public class JetSki extends WaterTransport {
 //        }
 //    }
 
-    public JetSki() {};
-
-    String[] sailBoatParams = {"the Skipper position", "JetSki type"};
-
-    public JetSki getJatSkiParams (WaterTransport waterTransport) {
-        String[] data = new String[sailBoatParams.length];
-        for(int i = 0; i < sailBoatParams.length; i ++) {
-            System.out.println("Enter " + sailBoatParams[i]);
-            data[i] = sc.nextLine();
-        }
-        JetSki receivedJetSki = new JetSki(waterTransport.getName(), waterTransport.getMaxSpeed(),
-                waterTransport.getPassengerCapacity(), waterTransport.getPrice(), data[0], data[1]);
-        return receivedJetSki;
-    }
+//    public JetSki() {};
+//
+//    String[] sailBoatParams = {"the Skipper position", "JetSki type"};
+//
+//    public JetSki getJatSkiParams (WaterTransport waterTransport) {
+//        String[] data = new String[sailBoatParams.length];
+//        for(int i = 0; i < sailBoatParams.length; i ++) {
+//            System.out.println("Enter " + sailBoatParams[i]);
+//            data[i] = sc.nextLine();
+//        }
+//        JetSki receivedJetSki = new JetSki(waterTransport.getName(), waterTransport.getMaxSpeed(),
+//                waterTransport.getPassengerCapacity(), waterTransport.getPrice(), data[0], data[1]);
+//        return receivedJetSki;
+//    }
 
     // Метод для вывода информации о лодке
     @Override

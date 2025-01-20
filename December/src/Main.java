@@ -1,5 +1,9 @@
 import trans.WaterTransport;
 import trans.products.*;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -10,13 +14,6 @@ public class Main {
         int id = sc.nextInt();
         sc.nextLine(); //очистка
         WaterTransport waterTransport = null; //переменная для хранения объекта
-
-//        WaterTransport waterTransport = new WaterTransport();//переменная для хранения объекта
-//        WaterTransport waterTransportReceivedData = waterTransport.getWaterTransportParams();
-//        Sailboat sailboat = new Sailboat();
-//        JetSki jetSki = new JetSki();
-//        SeaLiner seaLiner = new SeaLiner();
-//        ServiceBoat serviceBoat = new ServiceBoat();
 
         switch (id) {
             case 1:
@@ -43,6 +40,8 @@ public class Main {
     }
 
     public static Sailboat case1(Scanner sc){
+
+//        Scanner sc = new Scanner(System.in);
         System.out.println("Enter sail boat name: ");
         String sailBoatName = sc.nextLine();
         System.out.println("Enter max speed: ");
@@ -124,5 +123,19 @@ public class Main {
         int serviceBoatcrew = sc.nextInt();
         return new ServiceBoat(serviceBoatName, serviceBoatMaxSpeed, serviceBoatPassengerCapacity,
                 serviceBoatPrice, type, securityLevel, serviceBoatcrew);
+    }
+
+    public static void getCarInfo() {
+        try {
+            File file = new File("D:\\GitHubReps\\December12\\December\\user_boat_info.txt");
+            Scanner fileScanner = new Scanner(file);
+            ArrayList<String> dataFromFile = new ArrayList<>();
+            while (fileScanner.hasNext()) {
+                dataFromFile.add(fileScanner.nextLine());
+            }
+            dataFromFile.forEach(System.out::println);
+        } catch (FileNotFoundException e) {
+            System.out.println("Sorry, you haven't entered your data yet.\nPlease select option 1 first.");
+        }
     }
 }

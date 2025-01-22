@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="TranslationProjectSettings">
+    <option name="currentTranslationLanguage" value="Russian" />
+    <option name="structureTranslation">
+      <map>
+        <entry key="Russian">
+          <value>
+            <map>
+              <entry key="1004394986" value="Проверка делимости  " />
+              <entry key="1016082375" value="Логические операторы  " />
+              <entry key="1024825647" value="break и continue  " />
+              <entry key="103934391" value="Преобразование из double в int  " />
+              <entry key="1066946113" value="Условные операторы  " />
+              <entry key="1164200750" value="Приведение типов  " />
+              <entry key="1181385661" value="Дети на семью  " />
+              <entry key="1215094141" value="while против do-while  " />
+              <entry key="1271565517" value="Первые шаги в Java  " />
+              <entry key="1310275745" value="Таблица умножения  " />
+              <entry key="1315739855" value="Логический Boolean  " />
+              <entry key="1323219325" value="Переменные  " />
+              <entry key="1337403617" value="Условный счетчик while  " />
+              <entry key="1357227449" value="Числа с плавающей точкой  " />
+              <entry key="1377592192" value="Классы Java  " />
+              <entry key="1397636799" value="Сокращенные операторы  " />
+              <entry key="1434066292" value="Оператор вывода  " />
+              <entry key="1504018571" value="Вложенные циклы  " />
+              <entry key="1527678303" value="Условные конструкции  " />
+              <entry key="1566750139" value="Комментарии  " />
+              <entry key="1628600384" value="Вывод нечетных чисел  " />
+              <entry key="166065893" value="Дополнительные условия  " />
+              <entry key="1677765906" value="3- Управление потоком" />
+              <entry key="1677810763" value="1- Введение в программирование  " />
+              <entry key="1684113333" value="Кодирование упражнение  " />
+              <entry key="1741347896" value="Операторы  " />
+              <entry key="17496007" value="Циклы" />
+              <entry key="1800142076" value="Кофейня  " />
+              <entry key="1819671675" value="Булевы выражения  " />
+              <entry key="1851648316" value="Оператор switch  " />
+              <entry key="1858071847" value="Условие if  " />
+              <entry key="1954069082" value="Присвоение значений  " />
+              <entry key="1963080412" value="Цикл while  " />
+              <entry key="2002716117" value="Что такое программа  " />
+              <entry key="2005674487" value="Вывод циклов  " />
+              <entry key="2026225761" value="Язык программирования  " />
+              <entry key="2039362512" value="Введение в программирование  " />
+              <entry key="2063688967" value="Високосный год  " />
+              <entry key="2112978402" value="Условные операторы  " />
+              <entry key="2136818321" value="Условный делитель  " />
+              <entry key="300047858" value="Пересечение int и double  " />
+              <entry key="302638715" value="Условный вывод  " />
+              <entry key="32348803" value="Вложенные условные операторы  " />
+              <entry key="432838263" value="Введение  " />
+              <entry key="451099912" value="Переменные и типы  " />
+              <entry key="461437711" value="Положительное или отрицательное  " />
+              <entry key="489247402" value="Связанные условные операторы  " />
+              <entry key="506247491" value="Примитивные типы  " />
+              <entry key="55393906" value="Что такое отладка  " />
+              <entry key="674691391" value="Связанные против вложенных  " />
+              <entry key="706404187" value="Оператор остатка (%)" />
+              <entry key="717414971" value="Цикл for  " />
+              <entry key="727186020" value="Итерация и циклы  " />
+              <entry key="737732679" value="Математические методы  " />
+              <entry key="741451294" value="Целочисленное деление  " />
+              <entry key="76311992" value="Java-программа  " />
+              <entry key="788238004" value="Операторы  " />
+              <entry key="855399374" value="Вывод сообщений  " />
+              <entry key="867885234" value="if-else против switch  " />
+              <entry key="890764868" value="2- Первые шаги в Java  " />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="translationVersions">
+      <map>
+        <entry key="Russian" value="97" />
+      </map>
+    </option>
+  </component>
+</project>
